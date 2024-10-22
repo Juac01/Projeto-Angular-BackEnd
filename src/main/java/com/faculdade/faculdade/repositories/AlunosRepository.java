@@ -18,13 +18,6 @@ public interface AlunosRepository
             + "WHERE alunos.ativo=false ORDER BY alunos.nome")
     List<Alunos> listarTodosFechados();
 
-    List<Alunos> findByNome(String nome);
-    List<Alunos> findByRa(String ra);
-    List<Alunos> findByCep(String cep);
-    List<Alunos> findByNumero(int numero);
-    List<Alunos> findByComplemento(String complemento);
-    List<Alunos> findByNotaAdo1(double notaAdo1);
-    List<Alunos> findByNotaPI(double notaPI);
 
 }
 

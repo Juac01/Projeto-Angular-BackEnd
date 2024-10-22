@@ -29,37 +29,11 @@ public class AlunosService {
         return aluno.orElse(null);
     }
 
-    public List<Alunos> findByNome(String nome) {
-        return alunoRepository.findByNome(nome);
-    }
-
-    public List<Alunos> findByRa(String ra) {
-        return alunoRepository.findByRa(ra);
-    }
     public List<Alunos> findAll() {
         List<Alunos> alunos = alunoRepository.findAll();
         return alunos;
     }
 
-    public List<Alunos> findByCep(String cep) {
-        return alunoRepository.findByCep(cep);
-    }
-
-    public List<Alunos> findByNumero(int numero) {
-        return alunoRepository.findByNumero(numero);
-    }
-
-    public List<Alunos> findByComplemento(String complemento) {
-        return alunoRepository.findByComplemento(complemento);
-    }
-
-    public List<Alunos> findByNotaAdo1(double notaAdo1) {
-        return alunoRepository.findByNotaAdo1(notaAdo1);
-    }
-
-    public List<Alunos> findByNotaPI(double notaPI) {
-        return alunoRepository.findByNotaPI(notaPI);
-    }
 
 
 

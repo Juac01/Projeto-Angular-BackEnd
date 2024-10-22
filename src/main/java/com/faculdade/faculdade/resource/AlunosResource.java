@@ -35,49 +35,13 @@ public class AlunosResource {
         return ResponseEntity.ok().body(aluno);
     }
 
-    @GetMapping("/nome/{nome}")
-    public List<Alunos> findByNome(@PathVariable String nome) {
-        return alunosService.findByNome(nome);
-    }
 
-    @GetMapping("/ra/{ra}")
-    public List<Alunos> findByRa(@PathVariable String ra) {
-        return alunosService.findByRa(ra);
-    }
     @GetMapping
     public ResponseEntity<List<Alunos>> findAll() {
         List<Alunos> alunos = alunosService.findAll();
         return ResponseEntity.ok().body(alunos);
     }
-    @GetMapping("/cep/{cep}")
-    public ResponseEntity<List<Alunos>> findByCep(@PathVariable String cep) {
-        List<Alunos> alunos = alunosService.findByCep(cep);
-        return ResponseEntity.ok().body(alunos);
-    }
-
-    @GetMapping("/numero/{numero}")
-    public ResponseEntity<List<Alunos>> findByNumero(@PathVariable int numero) {
-        List<Alunos> alunos = alunosService.findByNumero(numero);
-        return ResponseEntity.ok().body(alunos);
-    }
-
-    @GetMapping("/complemento/{complemento}")
-    public ResponseEntity<List<Alunos>> findByComplemento(@PathVariable String complemento) {
-        List<Alunos> alunos = alunosService.findByComplemento(complemento);
-        return ResponseEntity.ok().body(alunos);
-    }
-
-    @GetMapping("/notaAdo1/{notaAdo1}")
-    public ResponseEntity<List<Alunos>> findByNotaAdo1(@PathVariable double notaAdo1) {
-        List<Alunos> alunos = alunosService.findByNotaAdo1(notaAdo1);
-        return ResponseEntity.ok().body(alunos);
-    }
-
-    @GetMapping("/notaPI/{notaPI}")
-    public ResponseEntity<List<Alunos>> findByNotaPI(@PathVariable double notaPI) {
-        List<Alunos> alunos = alunosService.findByNotaPI(notaPI);
-        return ResponseEntity.ok().body(alunos);
-    }
+  //Posso comentar aqui
 
 
     @PostMapping
